@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hôpital des Enfants - Accueil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Ajout de Font Awesome pour l'icône Facebook -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-gray-600 text-white p-4 sticky top-0 shadow-md z-50 animate-fadeIn">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center">
+                <div class="flex space-x-4">
+                    <a href="#" class="w-14 h-14 bg-[url('media/tee.jpg')] bg-contain bg-center bg-no-repeat bg-white border-4 border-white rounded-lg hover:brightness-110 transition-all duration-300 block"></a>
+                    <a href="https://www.msanp.gov.mg/index.php/Staff?staff=DGFS" target="_blank" class="w-14 h-14 bg-[url('media/sant.jpg')] bg-contain bg-center bg-no-repeat bg-white border-4cl border-white rounded-lg hover:brightness-110 transition-all duration-300 block"></a>
+                    <a href="https://www.msanp.gov.mg/" target="_blank" class="w-14 h-14 bg-[url('media/mada2.png')] bg-contain bg-center bg-no-repeat bg-white border-4 border-white rounded-lg hover:brightness-110 transition-all duration-300 block"></a>
+                    <a href="index.html" class="w-14 h-14 bg-[url('media/chumet_logo.png')] bg-contain bg-center bg-no-repeat bg-white border-4 border-white rounded-lg hover:brightness-110 transition-all duration-300 block"></a>
+                </div>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="font-bold hover:text-blue-200 transition-all duration-300 transform hover:scale-105">Accueil</a></li>
+                    <li><a href="https://www.msanp.gov.mg/" class="font-bold hover:text-blue-200 transition-all duration-300 transform hover:scale-105">MSANP</a></li>
+                    <li><a href="organigramme.html" target="_blank" class="font-bold hover:text-blue-200 transition-all duration-300 transform hover:scale-105">Organigramme</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- Buttons Section -->
+    <section class="bg-white text-white py-4 fixed top-20 left-0 w-full z-50 shadow-md animate-fadeIn">
+        <div class="container mx-auto">
+            <div class="flex justify-center space-x-4">
+                <button onclick="showModal('bouton1')" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 w-32 text-center font-bold transition-all duration-300 transform hover:scale-105">Soins</button>
+                <button onclick="showModal('bouton2')" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 w-32 text-center font-bold transition-all duration-300 transform hover:scale-105">Formation</button>
+                <button onclick="showModal('bouton3')" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 w-32 text-center font-bold transition-all duration-300 transform hover:scale-105">Recherche</button>
+            </div>
+        </div>
+        
+    </section>
+    
+    <!-- Modale existante (à placer avant la fermeture du body) -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white p-6 rounded-lg max-w-4xl w-full relative">
+            <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-600 hover:text-gray-800">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modal-content" class="text-center"></div>
+        </div>
+    </div>
+    
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 0.5s ease-out;
+        }
+    </style>
+    
+    <script>
+        // Script existant pour la modale
+        const modal = document.getElementById('modal');
+        const modalContent = document.getElementById('modal-content');
+    
+        function showModal(type) {
+            let content = '';
+            if (type === 'bouton1') {
+                content = `
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Soins</h3>
+                    <p class="text-gray-600">Consultation externe<br>
+                        Kinésithérapie<br>
+                        Ergothérapie<br>
+                        Appui psychosocial<br>
+                        Examens de laboratoire<br>
+                        Examens d’imagerie<br>
+                        ECG<br>
+                        Spirométrie
+                    </p>
+                `;
+            } else if (type === 'bouton2') {
+                content = `
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Formation</h3>
+                    <p class="text-gray-600">Etudiants en Médecine Humaine<br>
+                        Etudiants en Pharmacie<br>
+                        Etudiants paramédicaux<br>
+                        Etudiants en Santé Publique
+                    </p>
+                `;
+            } else if (type === 'bouton3') {
+                content = `
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Recherche</h3>
+                    <p class="text-gray-600">Santé de l’enfant<br>
+                        Biologie médicale
+                    </p>
+                `;
+           
+            modalContent.innerHTML = content;
+            modal.classList.remove('hidden');
+        }
+    
+        function closeModal() {
+            modal.classList.add('hidden');
+            modalContent.innerHTML = '';
+        }
+    </script>
+        }
+    <!-- Section Accueil (Background Carousel) -->
+    <section id="accueil" class="relative h-screen">
+        <div class="absolute inset-0 overflow-hidden">
+            <div id="carousel" class="flex transition-transform duration-500 ease-in-out h-full">
+                <div class="w-full h-full flex-shrink-0 relative">
+                    <img src="media/des9.jpg" alt="Image Hôpital 1" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+                        <h3 class="text-4xl font-bold text-white text-center px-4">Bienvenue à Centre Hospitalier Universitaire Mère Enfant Tsaralalana (CHUMET) </h3>
+                    </div>
+                    
+                </div>
+                <div class="w-full h-full flex-shrink-0 relative">
+                    <img src="media/des06.jpg" alt="Image Hôpital 1" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+                        <h3 class="text-4xl font-bold text-white text-center px-4">HISTORIQUE</h3>
+                    </div>
+                    
+                </div>
+                
+                <div class="w-full crumbs-full-width h-full flex-shrink-0 relative">
+                    <img src="media/des02.jpg" alt="Image Hôpital 2" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+                        <div class="text-left text-white max-w-lg">
+                            <ul class="text-2xl font-bold space-y-2">
+                                
+                                <li class="mb-2">1928 : Construction de l’Hôpital pédiatrique à vocation médicale (sans chirurgie) sous le nom de « Hôpital de la Croix Rouge » et constitué de 3 pavillons</li>
+                                <li class="mb-2">2006 : Construction d’un nouveau bâtiment abritant le service de réanimation néonatale et l’Accueil-Triage-Urgence (ATU)</li>
+                                <li class="mb-2">2008 : Réhabilitation du Pavillon AKAMA grâce au partenariat (PPP)</li>
+                                <li class="mb-2">2009 : Réhabilitation du Pavillon ISMAEL grâce au partenariat (PPP)</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="w-full crumbs-full-width h-full flex-shrink-0 relative">
+                    <img src="media/des7.jpg" alt="Image Hôpital 3" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+                        <div class="text-left text-white max-w-lg">
+                            <ul class="text-2xl font-bold space-y-2">
+                                <li class="mb-2">2010 : Introduction de l’approche qualité « 5S-KAIZEN-TQM »</li>
+                                <li class="mb-2">2011 : Réhabilitation du Pavillon ROTARY grâce au partenariat (PPP)</li>
+                                <li class="mb-2">2011 : Obtention du statut de site sentinelle de surveillance des méningites bactériennes et des diarrhées de l’enfant en collaboration avec l’OMS</li>
+                                <li class="mb-2">2012 : Acquisition d’un générateur d’oxygène grâce au partenariat (PPP)</li>
+                                <li class="mb-2">2013 : Innovation continue du plateau technique du laboratoire grâce au partenariat (PPP)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        
+                
+                <div class="w-full h-full flex-shrink-0 relative">
+                    <img src="media/des5.jpg" alt="Image Hôpital 3" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+                        <div class="text-left text-white max-w-lg">
+                            <ul class="text-2xl font-bold space-y-2">
+                                <li>2015 : Changement d’appellation en Centre Hospitalier Universitaire Mère Enfant Tsaralalàna (CHUMET)</li>
+                                <li>2017 : Construction du premier abri pour les accompagnants de malade</li>
+                                <li>2018 : Acquisition d’une ambulance</li>
+                                <li>2018 : Introduction de l’approche « Tri - Evaluation - Traitement d’Urgence » de l’OMS pour classer le degré d’urgence des patients dès l’accueil</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full h-full flex-shrink-0 relative">
+                    <img src="media/des8.jpg" alt="Image Hôpital 3" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+                        <div class="text-left text-white max-w-lg">
+                            <ul class="text-2xl font-bold space-y-2">
+                                <li>2019 : Attribution du label 5S par le Ministère de la Santé Publique et JICA</li>
+                                <li>2019 : Construction du deuxième abri pour les accompagnants de malade</li>
+                                <li>2019 : Inauguration du Centre de vaccination</li>
+                                <li>2022 : Acquisition de micro-onde de décontamination de déchets infectieux grâce au partenariat (PPP)</li>
+                                <li>2025 : Disponibilité d’examen fonctionnel respiratoire par spirométrie grâce au partenariat (PPP)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Boutons de navigation -->
+            <button id="prev" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full hover:bg-gray-600 z-10">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button id="next" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full hover:bg-gray-600 z-10">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+   
+    <section id="services" class="py-16 relative z-10 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-8">Nos services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <button onclick="showModal('direction')" class="bg-sky-300 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-sky-400">
+                    DIRECTION
+                </button>
+                <button onclick="showModal('Kinésithérapie')" class="bg-lime-300 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-lime-400">
+                    KINESITHERAPIE
+                </button>
+                <button onclick="showModal('echographie')" class="bg-yellow-100 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-yellow-200">
+                    ECHOGRAPHIE
+                </button>
+                <button onclick="showModal('plethymosgraphie')" class="bg-orange-200 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-orange-300">
+                    PLETHYSMOGRAPHIE
+                </button>
+                <button onclick="showModal('bureaux')" class="bg-yellow-200 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-yellow-300">
+                    BUREAUX
+                </button>
+                <button onclick="showModal('laboratoire')" class="bg-red-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-red-500">
+                    LABORATOIRE
+                </button>
+                <button onclick="showModal('ergothérapie')" class="bg-pink-300 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-pink-400">
+                    ERGOTHERAPIE
+                </button>
+                
+                
+                
+
+                <button onclick="showModal('radiologie')" class="bg-amber-200 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-amber-300">
+                    RADIOLOGIE
+                </button>
+                
+            </div>
+        </div>
+    </section>
+        <!-- Modale pour les informations supplémentaires -->
+        <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+            <div class="bg-white p-6 rounded-lg max-w-lg w-full relative">
+                <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-600 hover:text-gray-800">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div id="modal-content"></div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="apropos" class="bg-gray-200 py-16 relative z-10">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-8">Service d'hospitalisation</h2>
+            <button onclick="showModal('pavillon_ismael')" class="bg-blue-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-blue-500">
+                    PAVILLON ISMAEL
+            </button>
+            <button onclick="showModal('pavillon_akama')" class="bg-green-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-green-500">
+                    PAVILLON AKAMA
+            </button>
+            <button onclick="showModal('rnp')" class="bg-amber-200 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-amber-300">
+                    Réanimation Néonatala Payante
+            </button>
+           </div>
+    </section>
+    
+    <!-- Section sevice atu -->
+    <section id="apropos" class="bg-gray-200 py-16 relative z-10">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-8">Service de la laboratoire</h2>
+            <button onclick="showModal('ab')" class="bg-red-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-red-500">
+                    Analyses Biologiques
+            </button>
+            <button onclick="showModal('eh')" class="bg-red-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-red-500">
+                    Examen Hematologique
+            </button>
+            <button onclick="showModal('ep')" class="bg-red-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-red-500">
+                    Examen Parasitologique
+            </button>
+            <button onclick="showModal('ei')" class="bg-red-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-red-500">
+                    Examen Immunologique
+            </button>
+
+       </div>
+    </section>
+    
+    <!-- Section sevice im -->
+    <section id="apropos" class="bg-gray-200 py-16 relative z-10">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-8">Service d'imagerie</h2>
+            <button onclick="showModal('echographie')" class="bg-red-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-red-500">
+                    Echographie
+            </button>
+            <button onclick="showModal('radiologie')" class="bg-bleu-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-red-500">
+                    Radiologie
+            </button>
+            <button onclick="showModal('efr')" class="bg-red-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-red-500">
+                    Examen fonctionnel Respiratoire
+            </button>
+        </div>
+    </section>
+    
+    <section id="apropos" class="bg-gray-200 py-16 relative z-10">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center text-blue-800 mb-8">Service de vaccination</h2>
+        <button onclick="window.location.href='vaccin.html'" class="bg-red-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-blue-200">
+            Voir détails
+        </button>
+    </div>
+</section>
+    <section id="apropos" class="bg-gray-200 py-16 relative z-10">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-8">Service ATU</h2>
+            <button onclick="showModal('acceuil')" class="bg-red-500 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-red-500">
+                    Accueil
+            </button>
+            <button onclick="showModal('triage')" class="bg-yellow-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-red-500">
+                    Triage
+            </button>
+            <button onclick="showModal('urgence')" class="bg-green-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-red-500">
+                    Urgence    
+            </button>
+        </div>
+    </section>
+
+    <!-- Section Contact et Localisation -->
+    <section id="contact" class="py-16 relative z-10">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-8">Nous Contacter</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Formulaire de contact -->
+<div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
+    <form action="mailto:hoptaldesenfants@gmail.com" method="post" enctype="text/plain">
+        <div class="mb-4">
+            <label for="name" class="block text-gray-700 font-semibold mb-2">Nom</label>
+            <input type="text" id="name" name="name" class="w-full p-3 border rounded-lg" placeholder="Votre nom" required>
+        </div>
+        <div class="mb-4">
+            <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+            <input type="email" id="email" name="email" class="w-full p-3 border rounded-lg" placeholder="Votre email" required>
+        </div>
+        <div class="mb-4">
+            <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+            <textarea id="message" name="message" class="w-full p-3 border rounded-lg" rows="5" placeholder="Votre message" required></textarea>
+        </div>
+        <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 w-full">Envoyer</button>
+    </form>
+</div>
+                <!-- Localisation CHUMET Tsaralalana -->
+                <div class="max-w-lg mx-auto mt-8 md:mt-0">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4 text-center">Localisation CHUMET Tsaralalana</h3>
+                    <p class="text-gray-700 text-center mb-4 font-bold">CHUMET Tsaralalana, Antananarivo, Madagascar</p>
+                    <iframe class="w-full h-96 rounded-lg shadow-md" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.748766739678!2d47.5204866!3d-18.9068358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f07e01510f99fb%3A0x1cfb8b2bd604a5d1!2sH%C3%B4pital%20M%C3%A8re%20Enfant%20Tsaralal%C3%A0na%20HMET!5e0!3m2!1sfr!2smg!4v1724600000000!5m2!1sfr!2smg" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="bg-gray-600 text-white py-6 relative z-10">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 CHUMET. Tous droits réservés.</p>
+            <p class="mt-2">Adresse : CHUMET Tsaralalana, Antananarivo | Tél : 034 14 200 27</p>
+            <a href="https://mail.google.com/mail/hoptaldesenfants@gmail.com" target="_blank" > Email : hoptaldesenfants@gmail.com </a>   
+         
+
+            <div class="flex justify-center space-x-4 mt-4">
+                <img src="media/tee.jpg" alt="Ministry of Health Logo" class="h-16 w-16 border-2 border-white rounded-lg object-cover">
+                <img src="media/sant.jpg" alt="Direction Générale de Fourniture des Soins Logo" class="h-16 w-16 border-2 border-white rounded-lg object-cover">
+                <img src="media/mada2.png" alt="Republic of Madagascar Logo" class="h-16 w-16 border-2 border-white rounded-lg object-cover">
+                <img src="media/Logo CHUMET - Version.png" alt="CHUMET Logo" class="h-16 w-16 border-2 border-white rounded-lg object-cover">
+            </div>
+        </div>
+    </footer>
+    <!-- Sticky Text Below Buttons -->
+    <div class="fixed top-36 left-0 w-full bg-white text-black text-center py-2 z-50 animate-fadeIn sticky-bottom-text">
+        <p class="text-sm font-semibold" > <h4>« Hôpital accueillant, offrant des soins spécialisés de qualité, accessible à tous »</h4></p>
+    </div>
+    <style>
+        /* Style pour le texte avec fond blanc */
+        .sticky-bottom-text {
+            text-shadow: 0 0 4px rgba(255, 255, 255, 0.7); /* Ombre blanche pour lisibilité */
+            font-size: 30px; /* Taille de police agrandie */
+        }
+    </style>
+
+    <script>
+        // Smooth scrolling pour la navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Script pour le carrousel
+        const carousel = document.getElementById('carousel');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        const images = carousel.children;
+        let currentIndex = 0;
+        const totalImages = images.length;
+
+        function showImage(index) {
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            showImage(currentIndex);
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            showImage(currentIndex);
+        });
+
+        // Défilement automatique toutes les 5 secondes
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            showImage(currentIndex);
+        }, 5000);
+
+        // Script pour la modale
+        const modal = document.getElementById('modal');
+        const modalContent = document.getElementById('modal-content');
+
+        function showModal(type) {
+            let content = '';
+            if (type === 'direction') {
+                content = `
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Pédiatrie Générale</h3>
+                    <p class="text-gray-600">Nos services de pédiatrie générale offrent des soins complets pour les enfants de la naissance à l'adolescence. Cela inclut des consultations régulières, des vaccinations, des bilans de santé, et des diagnostics pour diverses affections pédiatriques. Notre équipe est dédiée à accompagner les familles dans le suivi de la croissance et du développement des enfants.</p>
+                `;
+            } else if (type === 'Kinésithérapie') {
+                content = `
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Kinésithérapie</h3>
+                    <p class="text-gray-600">Respiratoire</br>
+                        Motrice</p>
+                `;
+            } else if (type === 'ergothérapie') {
+                content = `
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Chirurgie Pédiatrique</h3>
+                    <p class="text-gray-600">Nos chirurgiens pédiatriques réalisent des interventions adaptées aux besoins spécifiques des enfants, allant des procédures mineures aux chirurgies complexes. Nous utilisons des techniques avancées pour minimiser les risques et assurer une récupération rapide dans un environnement sécurisé et bienveillant.</p>
+                `;
+            } else if (type === 'echographie') {
+                content = `
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Chirurgie Pédiatrique</h3>
+                    <p class="text-gray-600">Nos chirurgiens pédiatriques réalisent des interventions adaptées aux besoins spécifiques des enfants, allant des procédures mineures aux chirurgies complexes. Nous utilisons des techniques avancées pour minimiser les risques et assurer une récupération rapide dans un environnement sécurisé et bienveillant.</p>
+                `;
+            } else if (type === 'plethymosgraphie') {
+                content = `
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Chirurgie Pédiatrique</h3>
+                    <p class="text-gray-600">Nos chirurgiens pédiatriques réalisent des interventions adaptées aux besoins spécifiques des enfants, allant des procédures mineures aux chirurgies complexes. Nous utilisons des techniques avancées pour minimiser les risques et assurer une récupération rapide dans un environnement sécurisé et bienveillant.</p>
+                `;
+            } else if (type === 'bureaux') {
+                content = `
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Chirurgie Pédiatrique</h3>
+                    <p class="text-gray-600">Nos chirurgiens pédiatriques réalisent des interventions adaptées aux besoins spécifiques des enfants, allant des procédures mineures aux chirurgies complexes. Nous utilisons des techniques avancées pour minimiser les risques et assurer une récupération rapide dans un environnement sécurisé et bienveillant.</p>
+                `;
+            } else if (type === 'laboratoire') {
+                content = `
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Chirurgie Pédiatrique</h3>
+                    <p class="text-gray-600">Nos chirurgiens pédiatriques réalisent des interventions adaptées aux besoins spécifiques des enfants, allant des procédures mineures aux chirurgies complexes. Nous utilisons des techniques avancées pour minimiser les risques et assurer une récupération rapide dans un environnement sécurisé et bienveillant.</p>
+                `;
+            
+            } else if (type === 'pavillon_ismael') {
+                content = `
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Pavillon ISMAEL</h3>
+                    <p class="text-gray-600">Réanimation pediatrique commune </br>
+                        Pediatre Générale </br>
+                       <h4 class="text-xl font-semibold text-blue-600 mb-4">Payante</h4></br>
+                       Néonatalogie commune
+                     </p>
+                `;
+            } else if (type === 'pavillon_akama') {
+                content = `
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Pavillon AKAMA</h3>
+                    <p class="text-gray-600">CRENI</br>
+                        Pediatre Générale Commune</br>
+                        Pneumologie</br>
+                        Phtysiologie</p>
+                `;
+            } else if (type === 'voir1') {
+                content = `
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Pavillon AKAMA</h3>
+                        <li><a href="vaccin.html" class="font-bold hover:text-blue-200 transition-all duration-300 transform hover:scale-105">Organigramme</a></li>  
+           
+                `;
+            
+            } else if (type === 'radiologie') {
+                content = `
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Chirurgie Pédiatrique</h3>
+                    <p class="text-gray-600">Nos chirurgiens pédiatriques réalisent des interventions adaptées aux besoins spécifiques des enfants, allant des procédures mineures aux chirurgies complexes. Nous utilisons des techniques avancées pour minimiser les risques et assurer une récupération rapide dans un environnement sécurisé et bienveillant.</p>
+                `;
+            } else if (type === 'cafetaria') {
+                content = `
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Chirurgie Pédiatrique</h3>
+                    <p class="text-gray-600">Nos chirurgiens pédiatriques réalisent des interventions adaptées aux besoins spécifiques des enfants, allant des procédures mineures aux chirurgies complexes. Nous utilisons des techniques avancées pour minimiser les risques et assurer une récupération rapide dans un environnement sécurisé et bienveillant.</p>
+                `;
+            
+            } else if (type === 'bouton1') {
+                content = `
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Soins</h3>
+                    <p class="text-gray-600">Consultation externe<br>
+                        Kinésithérapie<br>
+                        Ergothérapie<br>
+                        Appui psychosocial<br>
+                        Examens de laboratoire<br>
+                        Examens d’imagerie<br>
+                        ECG<br>
+                        Spirométrie
+                    </p>
+                `;
+            } else if (type === 'bouton2') {
+                content = `
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Formation</h3>
+                    <p class="text-gray-600">Etudiants en Médecine Humaine<br>
+                        Etudiants en Pharmacie<br>
+                        Etudiants paramédicaux<br>
+                        Etudiants en Santé Publique
+                    </p>
+                `;
+            } else if (type === 'bouton3') {
+                content = `
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Recherche</h3>
+                    <p class="text-gray-600">Santé de l’enfant<br>
+                        Biologie médicale
+                    </p>
+                `;
+            }
+            modalContent.innerHTML = content;
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            modalContent.innerHTML = '';
+        }
+    </script>
+</body>
+</html>
