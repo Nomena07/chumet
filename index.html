@@ -9,36 +9,82 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-gray-100 font-sans">
+    <!-- ORIGINAL HEADER - RESTORED -->
     <header class="bg-gray-600 text-white p-4 sticky top-0 shadow-md z-50 animate-fadeIn">
         <div class="container mx-auto">
             <div class="flex justify-between items-center">
                 <div class="flex space-x-4">
-                    <a href="#" class="w-14 h-14 bg-[url('media/tee.jpg')] bg-contain bg-center bg-no-repeat bg-white border-4 border-white rounded-lg hover:brightness-110 transition-all duration-300 block"></a>
-                    <a href="https://www.msanp.gov.mg/index.php/Staff?staff=DGFS" target="_blank" class="w-14 h-14 bg-[url('media/sant.jpg')] bg-contain bg-center bg-no-repeat bg-white border-4cl border-white rounded-lg hover:brightness-110 transition-all duration-300 block"></a>
-                    <a href="https://www.msanp.gov.mg/" target="_blank" class="w-14 h-14 bg-[url('media/mada2.png')] bg-contain bg-center bg-no-repeat bg-white border-4 border-white rounded-lg hover:brightness-110 transition-all duration-300 block"></a>
+                    <a href="https://www.msanp.gov.mg/" class="w-14 h-14 bg-[url('media/tee.jpg')] bg-contain bg-center bg-no-repeat bg-white border-4 border-white rounded-lg hover:brightness-110 transition-all duration-300 block"></a>
+                    <a href="https://www.msanp.gov.mg/index.php/Staff?staff=DGFS" target="_blank" class="w-14 h-14 bg-[url('media/sant.jpg')] bg-contain bg-center bg-no-repeat bg-white border-4 border-white rounded-lg hover:brightness-110 transition-all duration-300 block"></a>
                     <a href="index.html" class="w-14 h-14 bg-[url('media/chumet_logo.png')] bg-contain bg-center bg-no-repeat bg-white border-4 border-white rounded-lg hover:brightness-110 transition-all duration-300 block"></a>
                 </div>
                 <ul class="flex space-x-6">
                     <li><a href="index.html" class="font-bold hover:text-blue-200 transition-all duration-300 transform hover:scale-105">Accueil</a></li>
+                    <li><a href="#services" class="font-bold hover:text-blue-200 transition-all duration-300 transform hover:scale-105">Services</a></li>
+                    <li><a href="#contact" class="font-bold hover:text-blue-200 transition-all duration-300 transform hover:scale-105">Contact</a></li>
                     <li><a href="https://www.msanp.gov.mg/" class="font-bold hover:text-blue-200 transition-all duration-300 transform hover:scale-105">MSANP</a></li>
-                    <li><a href="organigramme.html" target="_blank" class="font-bold hover:text-blue-200 transition-all duration-300 transform hover:scale-105">Organigramme</a></li>
+                    <li><a href="organigramme.html" class="font-bold hover:text-blue-200 transition-all duration-300 transform hover:scale-105">Organigramme</a></li>
                 </ul>
             </div>
         </div>
     </header>
-    <!-- Buttons Section -->
-    <section class="bg-white text-white py-4 fixed top-20 left-0 w-full z-50 shadow-md animate-fadeIn">
-        <div class="container mx-auto">
-            <div class="flex justify-center space-x-4">
-                <button onclick="showModal('bouton1')" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 w-32 text-center font-bold transition-all duration-300 transform hover:scale-105">Soins</button>
-                <button onclick="showModal('bouton2')" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 w-32 text-center font-bold transition-all duration-300 transform hover:scale-105">Formation</button>
-                <button onclick="showModal('bouton3')" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 w-32 text-center font-bold transition-all duration-300 transform hover:scale-105">Recherche</button>
+
+    <section class="bg-gradient-to-r from-gray-50 to-gray-100 text-white py-4 fixed top-20 left-0 w-full z-50 shadow-lg animate-fadeIn">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center space-x-5">
+                <button onclick="showModal('bouton1')" class="bg-gradient-to-r from-blue-700 to-blue-800 bg-opacity-90 text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-blue-900 hover:bg-opacity-100 w-32 text-center font-bold border border-blue-500 shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-xl">SOINS</button>
+                <button onclick="showModal('bouton2')" class="bg-gradient-to-r from-blue-700 to-blue-800 bg-opacity-90 text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-blue-900 hover:bg-opacity-100 w-32 text-center font-bold border border-blue-500 shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-xl">FORMATION</button>
+                <button onclick="showModal('bouton3')" class="bg-gradient-to-r from-blue-700 to-blue-800 bg-opacity-90 text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-blue-900 hover:bg-opacity-100 w-32 text-center font-bold border border-blue-500 shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-xl">RECHERCHE</button>
             </div>
         </div>
-        
     </section>
+
     
-    <!-- Modale existante (à placer avant la fermeture du body) -->
+
+  
+
+
+    <!-- Sticky Text Below Buttons - ORIGINAL - RESTORED -->
+    <style>
+        @keyframes slideInFromLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .animate-slideIn {
+            animation: slideInFromLeft 0.8s ease-out forwards;
+        }
+        .hover\:pulse:hover {
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        .font-amiri {
+            font-family: 'Amiri', serif;
+        }
+    </style>
+    <div class="fixed top-36 left-0 w-full bg-gradient-to-r from-white to-blue-50 text-black text-center py-6 z-50 animate-fadeIn sticky-bottom-text shadow-md">
+        <p class="text-2xl font-bold font-amiri tracking-wide leading-relaxed">
+            <span class="text-orange-700 block animate-slideIn" style="animation-delay: 0.2s;">Mission: Soins, formation et recherche</span>
+            <span class="text-orange-900 block animate-slideIn hover:pulse italic" style="animation-delay: 0.4s;">Vision: Hôpital accueillant, offrant des soins spécialisés de qualité, accessible à tous</span></p>
+    </div>
+    
+
+    <!-- Modale existante (à placer avant la fermeture du body) - ORIGINAL - RESTORED -->
     <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
         <div class="bg-white p-6 rounded-lg max-w-4xl w-full relative">
             <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-600 hover:text-gray-800">
@@ -62,291 +108,310 @@
         .animate-fadeIn {
             animation: fadeIn 0.5s ease-out;
         }
+
+        @keyframes spin-slow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 20s linear infinite;
+        }
+
+        /* Style pour le texte avec fond blanc - ORIGINAL - RESTORED */
+        .sticky-bottom-text {
+            text-shadow: 0 0 4px rgba(255, 255, 255, 0.7); /* Ombre blanche pour lisibilité */
+            font-size: 30px; /* Taille de police agrandie */
+        }
     </style>
     
-    <script>
-        // Script existant pour la modale
-        const modal = document.getElementById('modal');
-        const modalContent = document.getElementById('modal-content');
-    
-        function showModal(type) {
-            let content = '';
-            if (type === 'bouton1') {
-                content = `
-                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Soins</h3>
-                    <p class="text-gray-600">Consultation externe<br>
-                        Kinésithérapie<br>
-                        Ergothérapie<br>
-                        Appui psychosocial<br>
-                        Examens de laboratoire<br>
-                        Examens d’imagerie<br>
-                        ECG<br>
-                        Spirométrie
-                    </p>
-                `;
-            } else if (type === 'bouton2') {
-                content = `
-                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Formation</h3>
-                    <p class="text-gray-600">Etudiants en Médecine Humaine<br>
-                        Etudiants en Pharmacie<br>
-                        Etudiants paramédicaux<br>
-                        Etudiants en Santé Publique
-                    </p>
-                `;
-            } else if (type === 'bouton3') {
-                content = `
-                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Recherche</h3>
-                    <p class="text-gray-600">Santé de l’enfant<br>
-                        Biologie médicale
-                    </p>
-                `;
-           
-            modalContent.innerHTML = content;
-            modal.classList.remove('hidden');
-        }
-    
-        function closeModal() {
-            modal.classList.add('hidden');
-            modalContent.innerHTML = '';
-        }
-    </script>
-        }
-    <!-- Section Accueil (Background Carousel) -->
-    <section id="accueil" class="relative h-screen">
-        <div class="absolute inset-0 overflow-hidden">
-            <div id="carousel" class="flex transition-transform duration-500 ease-in-out h-full">
-                <div class="w-full h-full flex-shrink-0 relative">
-                    <img src="media/des9.jpg" alt="Image Hôpital 1" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
-                        <h3 class="text-4xl font-bold text-white text-center px-4">Bienvenue à Centre Hospitalier Universitaire Mère Enfant Tsaralalana (CHUMET) </h3>
-                    </div>
-                    
+    <!-- Hero Section - MODIFIED TO MATCH IMAGE, but adjusted to fit below existing fixed elements -->
+    <section id="accueil" class="relative bg-white-200 min-h-[calc(100vh-200px)] flex items-center justify-center p-8 overflow-hidden pt-48 md:pt-48">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-center relative z-10">
+            <!-- Left Image Container -->
+            <div class="w-full md:w-2/3 lg:w-3/5 xl:w-1/2 bg-white rounded-lg shadow-xl relative overflow-hidden flex items-center justify-center p-6 md:p-10 mb-8 md:mb-0">
+                <div class="relative w-full h-96 md:h-[500px] lg:h-[600px] overflow-hidden rounded-lg">
+                    <img src="media/des4.jpg" alt="Modern interior design" class="w-full h-full object-cover object-center">
+                    <!-- Overlay shapes - optional, if you want to add more decorative elements -->
+                    <div class="absolute top-0 left-0 w-24 h-24 border-t-2 border-l-2 border-gray-300 opacity-50"></div>
+                    <div class="absolute bottom-0 right-0 w-24 h-24 border-b-2 border-r-2 border-gray-300 opacity-50"></div>
                 </div>
-                <div class="w-full h-full flex-shrink-0 relative">
-                    <img src="media/des06.jpg" alt="Image Hôpital 1" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
-                        <h3 class="text-4xl font-bold text-white text-center px-4">HISTORIQUE</h3>
-                    </div>
-                    
-                </div>
-                
-                <div class="w-full crumbs-full-width h-full flex-shrink-0 relative">
-                    <img src="media/des02.jpg" alt="Image Hôpital 2" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
-                        <div class="text-left text-white max-w-lg">
-                            <ul class="text-2xl font-bold space-y-2">
-                                
-                                <li class="mb-2">1928 : Construction de l’Hôpital pédiatrique à vocation médicale (sans chirurgie) sous le nom de « Hôpital de la Croix Rouge » et constitué de 3 pavillons</li>
-                                <li class="mb-2">2006 : Construction d’un nouveau bâtiment abritant le service de réanimation néonatale et l’Accueil-Triage-Urgence (ATU)</li>
-                                <li class="mb-2">2008 : Réhabilitation du Pavillon AKAMA grâce au partenariat (PPP)</li>
-                                <li class="mb-2">2009 : Réhabilitation du Pavillon ISMAEL grâce au partenariat (PPP)</li>
-                            </ul>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="w-full crumbs-full-width h-full flex-shrink-0 relative">
-                    <img src="media/des7.jpg" alt="Image Hôpital 3" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
-                        <div class="text-left text-white max-w-lg">
-                            <ul class="text-2xl font-bold space-y-2">
-                                <li class="mb-2">2010 : Introduction de l’approche qualité « 5S-KAIZEN-TQM »</li>
-                                <li class="mb-2">2011 : Réhabilitation du Pavillon ROTARY grâce au partenariat (PPP)</li>
-                                <li class="mb-2">2011 : Obtention du statut de site sentinelle de surveillance des méningites bactériennes et des diarrhées de l’enfant en collaboration avec l’OMS</li>
-                                <li class="mb-2">2012 : Acquisition d’un générateur d’oxygène grâce au partenariat (PPP)</li>
-                                <li class="mb-2">2013 : Innovation continue du plateau technique du laboratoire grâce au partenariat (PPP)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-        
-                
-                <div class="w-full h-full flex-shrink-0 relative">
-                    <img src="media/des5.jpg" alt="Image Hôpital 3" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
-                        <div class="text-left text-white max-w-lg">
-                            <ul class="text-2xl font-bold space-y-2">
-                                <li>2015 : Changement d’appellation en Centre Hospitalier Universitaire Mère Enfant Tsaralalàna (CHUMET)</li>
-                                <li>2017 : Construction du premier abri pour les accompagnants de malade</li>
-                                <li>2018 : Acquisition d’une ambulance</li>
-                                <li>2018 : Introduction de l’approche « Tri - Evaluation - Traitement d’Urgence » de l’OMS pour classer le degré d’urgence des patients dès l’accueil</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <!-- Decorative element behind image -->
+                <div class="absolute -right-24 top-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-gray-300 opacity-30 animate-pulse"></div>
+            </div>
 
-                <div class="w-full h-full flex-shrink-0 relative">
-                    <img src="media/des8.jpg" alt="Image Hôpital 3" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
-                        <div class="text-left text-white max-w-lg">
-                            <ul class="text-2xl font-bold space-y-2">
-                                <li>2019 : Attribution du label 5S par le Ministère de la Santé Publique et JICA</li>
-                                <li>2019 : Construction du deuxième abri pour les accompagnants de malade</li>
-                                <li>2019 : Inauguration du Centre de vaccination</li>
-                                <li>2022 : Acquisition de micro-onde de décontamination de déchets infectieux grâce au partenariat (PPP)</li>
-                                <li>2025 : Disponibilité d’examen fonctionnel respiratoire par spirométrie grâce au partenariat (PPP)</li>
-                            </ul>
+            <!-- Right Text Content -->
+            <div class="w-full md:w-1/3 lg:w-2/5 xl:w-1/2 flex flex-col items-center md:items-start text-center md:text-left p-4 md:pl-12">
+                <h1 class="text-5xl lg:text-4xl font-extrabold text-gray-800 leading-tight mb-4">
+                    Bienvenu au <span class="block"> Centre Hospitalier Universitaire Mère Enfant Tsaralalàna (CHUMET)</span>
+                </h1>
+                <!-- <p class="text-lg text-gray-600 mb-6">SPECIAL EDITION</p>
+                <p class="text-gray-500 mb-8 max-w-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod.
+                </p> -->
+                
+                <!-- Decorative dots - Placeholder from image -->
+                <div class="flex space-x-2 mt-8">
+                    <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
+                    <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
+                    <span class="w-2 h-2 bg-gray-700 rounded-full"></span>
+                    <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decorative elements on the background -->
+        
+        <div class="absolute top-20 left-1/4 w-32 h-32 border-2 border-gray-300 rounded-full opacity-20"></div>
+        <div class="absolute bottom-1/4 right-20 w-48 h-48 border-2 border-gray-300 rounded-full opacity-20 animate-spin-slow"></div>
+        <div class="absolute bottom-40 left-10 w-16 h-16 bg-gray-300 rounded-full opacity-10"></div>
+    </section>
+    <section id="historique" class="py-20 relative z-10 bg-gradient-to-b from-gray-50 to-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-500 mb-12 tracking-tight">Notre Historique</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="relative">
+                    <!-- Timeline vertical line -->
+                    <div class="absolute left-4 md:left-[10%] top-0 bottom-0 w-1 bg-blue-300 transform -translate-x-1/2"></div>
+                    
+                    <!-- Timeline items -->
+                    <div class="space-y-8">
+                        <!-- 1928 -->
+                        <div class="relative flex items-center group">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center mr-4 md:mr-0 md:absolute md:left-[10%] md:-translate-x-1/2 z-10 transition-transform group-hover:scale-110">
+                                <span class="text-base font-bold">1928</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full md:w-[80%] md:ml-[20%]">
+                                <p class="text-lg font-bold text-gray-700">Construction de l’Hôpital pédiatrique à vocation médicale (sans chirurgie) sous le nom de « Hôpital de la Croix Rouge » et constitué de 3 pavillons</p>
+                            </div>
+                        </div>
+    
+                        <!-- 2006 -->
+                        <div class="relative flex items-center group">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center mr-4 md:mr-0 md:absolute md:left-[10%] md:-translate-x-1/2 z-10 transition-transform group-hover:scale-110">
+                                <span class="text-base font-bold">2006</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full md:w-[80%] md:ml-[20%]">
+                                <p class="text-lg font-bold text-gray-700">Construction d’un nouveau bâtiment abritant le service de réanimation néonatale et l’Accueil-Triage-Urgence (ATU)</p>
+                            </div>
+                        </div>
+    
+                        <!-- 2008 -->
+                        <div class="relative flex items-center group">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center mr-4 md:mr-0 md:absolute md:left-[10%] md:-translate-x-1/2 z-10 transition-transform group-hover:scale-110">
+                                <span class="text-base font-bold">2008</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full md:w-[80%] md:ml-[20%]">
+                                <p class="text-lg font-bold text-gray-700">Réhabilitation du Pavillon AKAMA grâce au partenariat (PPP)</p>
+                            </div>
+                        </div>
+    
+                        <!-- 2009 -->
+                        <div class="relative flex items-center group">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center mr-4 md:mr-0 md:absolute md:left-[10%] md:-translate-x-1/2 z-10 transition-transform group-hover:scale-110">
+                                <span class="text-base font-bold">2009</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full md:w-[80%] md:ml-[20%]">
+                                <p class="text-lg font-bold text-gray-700">Réhabilitation du Pavillon ISMAEL grâce au partenariat (PPP)</p>
+                            </div>
+                        </div>
+    
+                        <!-- 2010 -->
+                        <div class="relative flex items-center group">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center mr-4 md:mr-0 md:absolute md:left-[10%] md:-translate-x-1/2 z-10 transition-transform group-hover:scale-110">
+                                <span class="text-base font-bold">2010</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full md:w-[80%] md:ml-[20%]">
+                                <p class="text-lg font-bold text-gray-700">Introduction de l’approche qualité « 5S-KAIZEN-TQM »</p>
+                            </div>
+                        </div>
+    
+                        <!-- 2011 (First Entry) -->
+                        <div class="relative flex items-center group">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center mr-4 md:mr-0 md:absolute md:left-[10%] md:-translate-x-1/2 z-10 transition-transform group-hover:scale-110">
+                                <span class="text-base font-bold">2011</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full md:w-[80%] md:ml-[20%]">
+                                <p class="text-lg font-bold text-gray-700">Réhabilitation du Pavillon ROTARY grâce au partenariat (PPP)</p>
+                            </div>
+                        </div>
+    
+                        <!-- 2011 (Second Entry) -->
+                        <div class="relative flex items-center group">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center mr-4 md:mr-0 md:absolute md:left-[10%] md:-translate-x-1/2 z-10 transition-transform group-hover:scale-110">
+                                <span class="text-base font-bold">2011</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full md:w-[80%] md:ml-[20%]">
+                                <p class="text-lg font-bold text-gray-700">Obtention du statut de site sentinelle de surveillance des méningites bactériennes et des diarrhées de l’enfant en collaboration avec l’OMS</p>
+                            </div>
+                        </div>
+    
+                        <!-- 2012 -->
+                        <div class="relative flex items-center group">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center mr-4 md:mr-0 md:absolute md:left-[10%] md:-translate-x-1/2 z-10 transition-transform group-hover:scale-110">
+                                <span class="text-base font-bold">2012</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full md:w-[80%] md:ml-[20%]">
+                                <p class="text-lg font-bold text-gray-700">Acquisition d’un générateur d’oxygène grâce au partenariat (PPP)</p>
+                            </div>
+                        </div>
+    
+                        <!-- 2013 -->
+                        <div class="relative flex items-center group">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center mr-4 md:mr-0 md:absolute md:left-[10%] md:-translate-x-1/2 z-10 transition-transform group-hover:scale-110">
+                                <span class="text-base font-bold">2013</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full md:w-[80%] md:ml-[20%]">
+                                <p class="text-lg font-bold text-gray-700">Innovation continue du plateau technique du laboratoire grâce au partenariat (PPP)</p>
+                            </div>
+                        </div>
+    
+                        <!-- 2015 -->
+                        <div class="relative flex items-center group">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center mr-4 md:mr-0 md:absolute md:left-[10%] md:-translate-x-1/2 z-10 transition-transform group-hover:scale-110">
+                                <span class="text-base font-bold">2015</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full md:w-[80%] md:ml-[20%]">
+                                <p class="text-lg font-bold text-gray-700">Changement d’appellation en Centre Hospitalier Universitaire Mère Enfant Tsaralalàna (CHUMET)</p>
+                            </div>
+                        </div>
+    
+                        <!-- 2017 -->
+                        <div class="relative flex items-center group">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center mr-4 md:mr-0 md:absolute md:left-[10%] md:-translate-x-1/2 z-10 transition-transform group-hover:scale-110">
+                                <span class="text-base font-bold">2017</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full md:w-[80%] md:ml-[20%]">
+                                <p class="text-lg font-bold text-gray-700">Construction du premier abri pour les accompagnants de malade</p>
+                            </div>
+                        </div>
+    
+                        <!-- 2018 (First Entry) -->
+                        <div class="relative flex items-center group">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center mr-4 md:mr-0 md:absolute md:left-[10%] md:-translate-x-1/2 z-10 transition-transform group-hover:scale-110">
+                                <span class="text-base font-bold">2018</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full md:w-[80%] md:ml-[20%]">
+                                <p class="text-lg font-bold text-gray-700">Acquisition d’une ambulance</p>
+                            </div>
+                        </div>
+    
+                        <!-- 2018 (Second Entry) -->
+                        <div class="relative flex items-center group">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center mr-4 md:mr-0 md:absolute md:left-[10%] md:-translate-x-1/2 z-10 transition-transform group-hover:scale-110">
+                                <span class="text-base font-bold">2018</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full md:w-[80%] md:ml-[20%]">
+                                <p class="text-lg font-bold text-gray-700">Introduction de l’approche « Tri - Evaluation - Traitement d’Urgence » de l’OMS pour classer le degré d’urgence des patients dès l’accueil</p>
+                            </div>
+                        </div>
+    
+                        <!-- 2019 (First Entry) -->
+                        <div class="relative flex items-center group">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center mr-4 md:mr-0 md:absolute md:left-[10%] md:-translate-x-1/2 z-10 transition-transform group-hover:scale-110">
+                                <span class="text-base font-bold">2019</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full md:w-[80%] md:ml-[20%]">
+                                <p class="text-lg font-bold text-gray-700">Attribution du label 5S par le Ministère de la Santé Publique et JICA</p>
+                            </div>
+                        </div>
+    
+                        <!-- 2019 (Second Entry) -->
+                        <div class="relative flex items-center group">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center mr-4 md:mr-0 md:absolute md:left-[10%] md:-translate-x-1/2 z-10 transition-transform group-hover:scale-110">
+                                <span class="text-base font-bold">2019</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full md:w-[80%] md:ml-[20%]">
+                                <p class="text-lg font-bold text-gray-700">Construction du deuxième abri pour les accompagnants de malade</p>
+                            </div>
+                        </div>
+    
+                        <!-- 2019 (Third Entry) -->
+                        <div class="relative flex items-center group">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center mr-4 md:mr-0 md:absolute md:left-[10%] md:-translate-x-1/2 z-10 transition-transform group-hover:scale-110">
+                                <span class="text-base font-bold">2019</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full md:w-[80%] md:ml-[20%]">
+                                <p class="text-lg font-bold text-gray-700">Inauguration du Centre de vaccination</p>
+                            </div>
+                        </div>
+    
+                        <!-- 2022 -->
+                        <div class="relative flex items-center group">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center mr-4 md:mr-0 md:absolute md:left-[10%] md:-translate-x-1/2 z-10 transition-transform group-hover:scale-110">
+                                <span class="text-base font-bold">2022</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full md:w-[80%] md:ml-[20%]">
+                                <p class="text-lg font-bold text-gray-700">Acquisition de micro-onde de décontamination de déchets infectieux grâce au partenariat (PPP)</p>
+                            </div>
+                        </div>
+    
+                        <!-- 2025 -->
+                        <div class="relative flex items-center group">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center mr-4 md:mr-0 md:absolute md:left-[10%] md:-translate-x-1/2 z-10 transition-transform group-hover:scale-110">
+                                <span class="text-base font-bold">2025</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full md:w-[80%] md:ml-[20%]">
+                                <p class="text-lg font-bold text-gray-700">Disponibilité d’examen fonctionnel respiratoire par spirométrie grâce au partenariat (PPP)</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Boutons de navigation -->
-            <button id="prev" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full hover:bg-gray-600 z-10">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button id="next" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full hover:bg-gray-600 z-10">
-                <i class="fas fa-chevron-right"></i>
-            </button>
         </div>
     </section>
 
-   
+    <!-- Section Services - ORIGINAL - RESTORED -->
     <section id="services" class="py-16 relative z-10 bg-gray-100">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center text-blue-800 mb-8">Nos services</h2>
+            <h2 class="text-3xl font-bold text-center text-gray-500 mb-8">Nos services</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <button onclick="showModal('direction')" class="bg-sky-300 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-sky-400">
-                    DIRECTION
+                <button onclick="window.location.href='service_hop.html'" class="bg-orange-400 p-6 rounded-lg shadow-md text-xl font-bold text-black hover:bg-blue-200">
+                    Service de hospitalisation
                 </button>
-                <button onclick="showModal('Kinésithérapie')" class="bg-lime-300 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-lime-400">
-                    KINESITHERAPIE
+                <button onclick="window.location.href='imagerie.html'" class="bg-yellow-400 p-6 rounded-lg shadow-md text-xl font-bold text-black hover:bg-blue-200">
+                    Service d'imagerie
                 </button>
-                <button onclick="showModal('echographie')" class="bg-yellow-100 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-yellow-200">
-                    ECHOGRAPHIE
+                <button onclick="window.location.href='labo.html'" class="bg-lime-400 p-6 rounded-lg shadow-md text-xl font-bold text-black hover:bg-blue-200">
+                    Laboratoires
                 </button>
-                <button onclick="showModal('plethymosgraphie')" class="bg-orange-200 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-orange-300">
-                    PLETHYSMOGRAPHIE
+                <button onclick="window.location.href='exploration.html'" class="bg-red-400 p-6 rounded-lg shadow-md text-xl font-bold text-black hover:bg-red-200">
+                    Explorations fonctionnelles
                 </button>
-                <button onclick="showModal('bureaux')" class="bg-yellow-200 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-yellow-300">
-                    BUREAUX
+                <button onclick="window.location.href='offresons.html'" class="bg-green-400 p-6 rounded-lg shadow-md text-xl font-bold text-black hover:bg-green-200">
+                    Offres de soins externe
                 </button>
-                <button onclick="showModal('laboratoire')" class="bg-red-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-red-500">
-                    LABORATOIRE
+                <button onclick="window.location.href='vaccin.html'" class="bg-blue-400 p-6 rounded-lg shadow-md text-xl font-bold text-black hover:bg-blue-200">
+                    Service de vaccination
                 </button>
-                <button onclick="showModal('ergothérapie')" class="bg-pink-300 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-pink-400">
-                    ERGOTHERAPIE
+                <button onclick="window.location.href='ATU.html'" class="bg-pink-400 p-6 rounded-lg shadow-md text-xl font-bold text-black hover:bg-blue-200">
+                    Service de ATU
                 </button>
-                
-                
-                
-
-                <button onclick="showModal('radiologie')" class="bg-amber-200 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-amber-300">
-                    RADIOLOGIE
-                </button>
-                
             </div>
         </div>
     </section>
-        <!-- Modale pour les informations supplémentaires -->
-        <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
-            <div class="bg-white p-6 rounded-lg max-w-lg w-full relative">
-                <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-600 hover:text-gray-800">
-                    <i class="fas fa-times"></i>
-                </button>
-                <div id="modal-content"></div>
-            </div>
-        </div>
-    </section>
-    
-    
-    <section id="apropos" class="bg-gray-200 py-16 relative z-10">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center text-blue-800 mb-8">Service d'hospitalisation</h2>
-            <button onclick="showModal('pavillon_ismael')" class="bg-blue-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-blue-500">
-                    PAVILLON ISMAEL
-            </button>
-            <button onclick="showModal('pavillon_akama')" class="bg-green-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-green-500">
-                    PAVILLON AKAMA
-            </button>
-            <button onclick="showModal('rnp')" class="bg-amber-200 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-amber-300">
-                    Réanimation Néonatala Payante
-            </button>
-           </div>
-    </section>
-    
-    <!-- Section sevice atu -->
-    <section id="apropos" class="bg-gray-200 py-16 relative z-10">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center text-blue-800 mb-8">Service de la laboratoire</h2>
-            <button onclick="showModal('ab')" class="bg-red-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-red-500">
-                    Analyses Biologiques
-            </button>
-            <button onclick="showModal('eh')" class="bg-red-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-red-500">
-                    Examen Hematologique
-            </button>
-            <button onclick="showModal('ep')" class="bg-red-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-red-500">
-                    Examen Parasitologique
-            </button>
-            <button onclick="showModal('ei')" class="bg-red-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-red-500">
-                    Examen Immunologique
-            </button>
 
-       </div>
-    </section>
-    
-    <!-- Section sevice im -->
-    <section id="apropos" class="bg-gray-200 py-16 relative z-10">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center text-blue-800 mb-8">Service d'imagerie</h2>
-            <button onclick="showModal('echographie')" class="bg-red-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-red-500">
-                    Echographie
-            </button>
-            <button onclick="showModal('radiologie')" class="bg-bleu-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-red-500">
-                    Radiologie
-            </button>
-            <button onclick="showModal('efr')" class="bg-red-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-red-500">
-                    Examen fonctionnel Respiratoire
-            </button>
-        </div>
-    </section>
-    
-    <section id="apropos" class="bg-gray-200 py-16 relative z-10">
-    <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center text-blue-800 mb-8">Service de vaccination</h2>
-        <button onclick="window.location.href='vaccin.html'" class="bg-red-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-blue-200">
-            Voir détails
-        </button>
-    </div>
-</section>
-    <section id="apropos" class="bg-gray-200 py-16 relative z-10">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center text-blue-800 mb-8">Service ATU</h2>
-            <button onclick="showModal('acceuil')" class="bg-red-500 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-red-500">
-                    Accueil
-            </button>
-            <button onclick="showModal('triage')" class="bg-yellow-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-red-500">
-                    Triage
-            </button>
-            <button onclick="showModal('urgence')" class="bg-green-400 p-6 rounded-lg shadow-md text-xl font-semibold text-black hover:bg-red-500">
-                    Urgence    
-            </button>
-        </div>
-    </section>
-
-    <!-- Section Contact et Localisation -->
+    <!-- Section Contact et Localisation - ORIGINAL - RESTORED -->
     <section id="contact" class="py-16 relative z-10">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center text-blue-800 mb-8">Nous Contacter</h2>
+            <h2 class="text-3xl font-bold text-center text-gray-500 mb-8">Nous Contacter</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Formulaire de contact -->
-<div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
-    <form action="mailto:hoptaldesenfants@gmail.com" method="post" enctype="text/plain">
-        <div class="mb-4">
-            <label for="name" class="block text-gray-700 font-semibold mb-2">Nom</label>
-            <input type="text" id="name" name="name" class="w-full p-3 border rounded-lg" placeholder="Votre nom" required>
-        </div>
-        <div class="mb-4">
-            <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
-            <input type="email" id="email" name="email" class="w-full p-3 border rounded-lg" placeholder="Votre email" required>
-        </div>
-        <div class="mb-4">
-            <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
-            <textarea id="message" name="message" class="w-full p-3 border rounded-lg" rows="5" placeholder="Votre message" required></textarea>
-        </div>
-        <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 w-full">Envoyer</button>
-    </form>
-</div>
-                <!-- Localisation CHUMET Tsaralalana -->
+                <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
+                    <form action="mailto:hoptaldesenfants@gmail.com" method="post" enctype="text/plain">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-semibold mb-2">Nom</label>
+                            <input type="text" id="name" name="name" class="w-full p-3 border rounded-lg" placeholder="Votre nom" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full p-3 border rounded-lg" placeholder="Votre email" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+                            <textarea id="message" name="message" class="w-full p-3 border rounded-lg" rows="5" placeholder="Votre message" required></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 w-full">Envoyer</button>
+                    </form>
+                </div>
                 <div class="max-w-lg mx-auto mt-8 md:mt-0">
                     <h3 class="text-xl font-semibold text-blue-600 mb-4 text-center">Localisation CHUMET Tsaralalana</h3>
                     <p class="text-gray-700 text-center mb-4 font-bold">CHUMET Tsaralalana, Antananarivo, Madagascar</p>
@@ -356,185 +421,138 @@
         </div>
     </section>
 
-    <!-- Pied de page -->
+    <!-- Pied de page - ORIGINAL - RESTORED -->
     <footer class="bg-gray-600 text-white py-6 relative z-10">
         <div class="container mx-auto text-center">
             <p>&copy; 2025 CHUMET. Tous droits réservés.</p>
-            <p class="mt-2">Adresse : CHUMET Tsaralalana, Antananarivo | Tél : 034 14 200 27</p>
-            <a href="https://mail.google.com/mail/hoptaldesenfants@gmail.com" target="_blank" > Email : hoptaldesenfants@gmail.com </a>   
-         
-
+            <p class="mt-2">Adresse : CHUMET Tsaralalana, Antananarivo | Tél : 034 14 200 98</p>
+            <a href="mailto:hoptaldesenfants@gmail.com" target="_blank">Email : hoptaldesenfants@gmail.com</a>   
             <div class="flex justify-center space-x-4 mt-4">
                 <img src="media/tee.jpg" alt="Ministry of Health Logo" class="h-16 w-16 border-2 border-white rounded-lg object-cover">
                 <img src="media/sant.jpg" alt="Direction Générale de Fourniture des Soins Logo" class="h-16 w-16 border-2 border-white rounded-lg object-cover">
-                <img src="media/mada2.png" alt="Republic of Madagascar Logo" class="h-16 w-16 border-2 border-white rounded-lg object-cover">
-                <img src="media/Logo CHUMET - Version.png" alt="CHUMET Logo" class="h-16 w-16 border-2 border-white rounded-lg object-cover">
+                <img src="media/chumet.png" alt="CHUMET Logo" class="h-16 w-16 border-2 border-white rounded-lg object-cover">
             </div>
         </div>
     </footer>
-    <!-- Sticky Text Below Buttons -->
-    <div class="fixed top-36 left-0 w-full bg-white text-black text-center py-2 z-50 animate-fadeIn sticky-bottom-text">
-        <p class="text-sm font-semibold" > <h4>« Hôpital accueillant, offrant des soins spécialisés de qualité, accessible à tous »</h4></p>
-    </div>
-    <style>
-        /* Style pour le texte avec fond blanc */
-        .sticky-bottom-text {
-            text-shadow: 0 0 4px rgba(255, 255, 255, 0.7); /* Ombre blanche pour lisibilité */
-            font-size: 30px; /* Taille de police agrandie */
-        }
-    </style>
 
     <script>
-        // Smooth scrolling pour la navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Script pour le carrousel
-        const carousel = document.getElementById('carousel');
-        const prevButton = document.getElementById('prev');
-        const nextButton = document.getElementById('next');
-        const images = carousel.children;
-        let currentIndex = 0;
-        const totalImages = images.length;
-
-        function showImage(index) {
-            carousel.style.transform = `translateX(-${index * 100}%)`;
-        }
-
-        prevButton.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-            showImage(currentIndex);
-        });
-
-        nextButton.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % totalImages;
-            showImage(currentIndex);
-        });
-
-        // Défilement automatique toutes les 5 secondes
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % totalImages;
-            showImage(currentIndex);
-        }, 5000);
-
-        // Script pour la modale
+        // ORIGINAL SCRIPT FOR MODAL - RESTORED
         const modal = document.getElementById('modal');
         const modalContent = document.getElementById('modal-content');
-
+    
         function showModal(type) {
             let content = '';
-            if (type === 'direction') {
+            if (type === 'bouton1') {
                 content = `
-                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Pédiatrie Générale</h3>
-                    <p class="text-gray-600">Nos services de pédiatrie générale offrent des soins complets pour les enfants de la naissance à l'adolescence. Cela inclut des consultations régulières, des vaccinations, des bilans de santé, et des diagnostics pour diverses affections pédiatriques. Notre équipe est dédiée à accompagner les familles dans le suivi de la croissance et du développement des enfants.</p>
-                `;
-            } else if (type === 'Kinésithérapie') {
-                content = `
-                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Kinésithérapie</h3>
-                    <p class="text-gray-600">Respiratoire</br>
-                        Motrice</p>
-                `;
-            } else if (type === 'ergothérapie') {
-                content = `
-                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Chirurgie Pédiatrique</h3>
-                    <p class="text-gray-600">Nos chirurgiens pédiatriques réalisent des interventions adaptées aux besoins spécifiques des enfants, allant des procédures mineures aux chirurgies complexes. Nous utilisons des techniques avancées pour minimiser les risques et assurer une récupération rapide dans un environnement sécurisé et bienveillant.</p>
-                `;
-            } else if (type === 'echographie') {
-                content = `
-                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Chirurgie Pédiatrique</h3>
-                    <p class="text-gray-600">Nos chirurgiens pédiatriques réalisent des interventions adaptées aux besoins spécifiques des enfants, allant des procédures mineures aux chirurgies complexes. Nous utilisons des techniques avancées pour minimiser les risques et assurer une récupération rapide dans un environnement sécurisé et bienveillant.</p>
-                `;
-            } else if (type === 'plethymosgraphie') {
-                content = `
-                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Chirurgie Pédiatrique</h3>
-                    <p class="text-gray-600">Nos chirurgiens pédiatriques réalisent des interventions adaptées aux besoins spécifiques des enfants, allant des procédures mineures aux chirurgies complexes. Nous utilisons des techniques avancées pour minimiser les risques et assurer une récupération rapide dans un environnement sécurisé et bienveillant.</p>
-                `;
-            } else if (type === 'bureaux') {
-                content = `
-                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Chirurgie Pédiatrique</h3>
-                    <p class="text-gray-600">Nos chirurgiens pédiatriques réalisent des interventions adaptées aux besoins spécifiques des enfants, allant des procédures mineures aux chirurgies complexes. Nous utilisons des techniques avancées pour minimiser les risques et assurer une récupération rapide dans un environnement sécurisé et bienveillant.</p>
-                `;
-            } else if (type === 'laboratoire') {
-                content = `
-                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Chirurgie Pédiatrique</h3>
-                    <p class="text-gray-600">Nos chirurgiens pédiatriques réalisent des interventions adaptées aux besoins spécifiques des enfants, allant des procédures mineures aux chirurgies complexes. Nous utilisons des techniques avancées pour minimiser les risques et assurer une récupération rapide dans un environnement sécurisé et bienveillant.</p>
-                `;
-            
-            } else if (type === 'pavillon_ismael') {
-                content = `
-                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Pavillon ISMAEL</h3>
-                    <p class="text-gray-600">Réanimation pediatrique commune </br>
-                        Pediatre Générale </br>
-                       <h4 class="text-xl font-semibold text-blue-600 mb-4">Payante</h4></br>
-                       Néonatalogie commune
-                     </p>
-                `;
-            } else if (type === 'pavillon_akama') {
-                content = `
-                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Pavillon AKAMA</h3>
-                    <p class="text-gray-600">CRENI</br>
-                        Pediatre Générale Commune</br>
-                        Pneumologie</br>
-                        Phtysiologie</p>
-                `;
-            } else if (type === 'voir1') {
-                content = `
-                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Pavillon AKAMA</h3>
-                        <li><a href="vaccin.html" class="font-bold hover:text-blue-200 transition-all duration-300 transform hover:scale-105">Organigramme</a></li>  
-           
-                `;
-            
-            } else if (type === 'radiologie') {
-                content = `
-                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Chirurgie Pédiatrique</h3>
-                    <p class="text-gray-600">Nos chirurgiens pédiatriques réalisent des interventions adaptées aux besoins spécifiques des enfants, allant des procédures mineures aux chirurgies complexes. Nous utilisons des techniques avancées pour minimiser les risques et assurer une récupération rapide dans un environnement sécurisé et bienveillant.</p>
-                `;
-            } else if (type === 'cafetaria') {
-                content = `
-                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Chirurgie Pédiatrique</h3>
-                    <p class="text-gray-600">Nos chirurgiens pédiatriques réalisent des interventions adaptées aux besoins spécifiques des enfants, allant des procédures mineures aux chirurgies complexes. Nous utilisons des techniques avancées pour minimiser les risques et assurer une récupération rapide dans un environnement sécurisé et bienveillant.</p>
-                `;
-            
-            } else if (type === 'bouton1') {
-                content = `
-                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Soins</h3>
-                    <p class="text-gray-600">Consultation externe<br>
-                        Kinésithérapie<br>
-                        Ergothérapie<br>
-                        Appui psychosocial<br>
-                        Examens de laboratoire<br>
-                        Examens d’imagerie<br>
-                        ECG<br>
-                        Spirométrie
-                    </p>
+        <div class="bg-white shadow-lg rounded-lg p-8 max-w-4xl mx-auto flex flex-col md:flex-row gap-6">
+        <div class="md:w-1/2">
+            <img src="media/des02.jpg" alt="Image médicale" class="w-full h-auto rounded-lg shadow-md object-cover"/>
+        </div>
+        <div class="md:w-1/2">
+            <h3 class="text-3xl font-bold text-orange-700 mb-6 border-b-2 border-blue-200 pb-2">Soins</h3>
+            <ul class="text-gray-700 text-lg space-y-4">
+                <li class="flex items-center">
+                    <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Consultation externe
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Kinésithérapie
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Ergothérapie
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Appui psychosocial
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Examens de laboratoire
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Examens d’imagerie
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    ECG
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Spirométrie
+                </li>
+            </ul>
+        </div>
+    </div>;
+
                 `;
             } else if (type === 'bouton2') {
                 content = `
-                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Formation</h3>
-                    <p class="text-gray-600">Etudiants en Médecine Humaine<br>
-                        Etudiants en Pharmacie<br>
-                        Etudiants paramédicaux<br>
-                        Etudiants en Santé Publique
-                    </p>
+                <div class="bg-white shadow-lg rounded-lg p-8 max-w-4xl mx-auto flex flex-col md:flex-row gap-6">
+        <div class="md:w-1/2">
+            <img src="media/formation.jpeg" alt="Image médicale" class="w-full h-auto rounded-lg shadow-md object-cover"/>
+        </div>
+        <div class="md:w-1/2">
+                
+    <h3 class="text-3xl font-bold text-orange-700 mb-6 border-b-2 border-blue-200 pb-2">Formations</h3>
+    <ul class="text-gray-700 text-lg space-y-4">
+        
+        <li class="flex items-center">
+            <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            Etudiants en Médecine Humaine
+        </li>
+        <li class="flex items-center">
+            <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            Etudiants en Pharmacie
+        </li>
+        <li class="flex items-center">
+            <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            Etudiants paramédicaux
+        </li>
+        <li class="flex items-center">
+            <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            ECG(Electrocardiogramme)
+        </li>
+        <li class="flex items-center">
+            <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            Etudiants en Santé Publique
+        </li>
+    </ul>
+    </div>
+                        
+                    
                 `;
             } else if (type === 'bouton3') {
                 content = `
-                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Recherche</h3>
-                    <p class="text-gray-600">Santé de l’enfant<br>
-                        Biologie médicale
-                    </p>
+                <div class="bg-white shadow-lg rounded-lg p-8 max-w-4xl mx-auto flex flex-col md:flex-row gap-6">
+        <div class="md:w-1/2">
+            <img src="media/des02.jpg" alt="Image médicale" class="w-full h-auto rounded-lg shadow-md object-cover"/>
+        </div>
+        <div class="md:w-1/2">
+            
+    <h3 class="text-3xl font-bold text-orange-700 mb-6 border-b-2 border-blue-200 pb-2">Recherches</h3>
+    <ul class="text-gray-700 text-lg space-y-4 items-center">
+        
+    
+        <li class="flex items-center">
+            <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            Santé de l’enfant
+        </li>
+        <li class="flex items-center">
+            <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            Biologie médicale
+        </li>
+    </ul>
+    </div>
+                    
                 `;
             }
             modalContent.innerHTML = content;
             modal.classList.remove('hidden');
         }
-
+    
         function closeModal() {
             modal.classList.add('hidden');
             modalContent.innerHTML = '';
