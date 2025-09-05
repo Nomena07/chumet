@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>offres  - CHUMET</title>
+    <title>hospitalisation - CHUMET</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -37,8 +37,7 @@
         </div>
     </section>
 
-    
-
+   
 
     <!-- Sticky Text Below Buttons - ORIGINAL - RESTORED -->
     <style>
@@ -141,63 +140,33 @@
                     
                     <div class="container mx-auto px-6 relative z-10">
                         <h2 class="text-4xl font-extrabold text-center text-gray-500 mb-12 relative animate-fadeIn">
-                            Offres de soins externes
+                            Service d'hospitalisation
                             <span class="block w-32 h-1 bg-blue-600 mx-auto mt-3 rounded"></span>
                         </h2>
                         <div class="flex flex-row flex-wrap justify-center gap-8">
-                            
+                            <!-- Cadre pour Radiographie -->
                             <div class="bg-gradient-to-br from-blue-100 to-blue-200 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 w-full sm:w-96 animate-fadeIn">
                                 <div class="flex items-center space-x-4 mb-6">
                                     <i class="fas fa-x-ray text-blue-700 text-3xl"></i>
-                                    <h3 class="text-2xl font-bold text-blue-800">Consultation externe</h3>
+                                    <h3 class="text-2xl font-bold text-blue-800"> Médicaments pour enfants</h3>
                                 </div>
-                                <ul class="text-gray-700 space-y-2 text-base font-bold list-disc pl-5">
-                                    <li>Consultation externe par des pédiatres</li>
-                                    <li>Consultation externe par des médecins généralistes</li>
-                                  
-                                </ul>
+                                <!-- <ul class="text-gray-700 space-y-2 text-base font-bold list-disc pl-5">
+                                    <li>Pédiatrie générale</li>
+                                    <li>Pédiatrie pneumopédiatrie</li>
+                                    <li>Réanimation pediatrique</li>
+                                   
+                                </ul> -->
                             </div>
-                            
+                            <!-- Cadre pour Échographie -->
                             <div class="bg-gradient-to-br from-blue-100 to-blue-200 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 w-full sm:w-96 animate-fadeIn">
                                 <div class="flex items-center space-x-4 mb-6">
                                     <i class="fas fa-ultrasound text-blue-700 text-3xl"></i>
-                                    <h3 class="text-2xl font-bold text-blue-800">Kinésithérapie</h3>
+                                    <h3 class="text-2xl font-bold text-blue-800">Consommbales pour soins pédiatriques</h3>
                                 </div>
-                                <div class="mb-6">
-                                    <img src="media/kine.jpg" alt="Kinésithérapie Image" class="w-full h-48 object-cover rounded-lg">
-                                </div>
-                                <ul class="text-gray-700 space-y-2 text-base font-bold list-disc pl-5">
-                                    <li>Kinésithérapie respiratoire</li>
-                                    <li>Kinésithérapie motrice</li>
-                                </ul>
+                                
                             </div>
 
-                            <div class="bg-gradient-to-br from-blue-100 to-blue-200 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 w-full sm:w-96 animate-fadeIn">
-                                <div class="flex items-center space-x-4 mb-6">
-                                    <i class="fas fa-ultrasound text-blue-700 text-3xl"></i>
-                                    <h3 class="text-2xl font-bold text-blue-800">Ergothérapie</h3>
-                                </div>
-                                <div class="mb-6">
-                                    <img src="media/ergo.jpg" alt="Kinésithérapie Image" class="w-full h-48 object-cover rounded-lg">
-                                </div>
-                                <ul class="text-gray-700 space-y-2 text-base font-bold list-disc pl-5">
-                                    <li>Stimulation graphomotrice</li>
-                                    <li>Stimulation des développement de l'enfant</li>
-                                    <li>Stimulation sensorielle</li>
-                            </div>
-
-                            <div class="bg-gradient-to-br from-blue-100 to-blue-200 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 w-full sm:w-96 animate-fadeIn">
-                                <div class="flex items-center space-x-4 mb-6">
-                                    <i class="fas fa-ultrasound text-blue-700 text-3xl"></i>
-                                    <h3 class="text-2xl font-bold text-blue-800">Soins infirmiers</h3>
-                                </div>
-                                <div class="mb-6">
-                                    <img src="media/soinsin.jpg" alt="Kinésithérapie Image" class="w-full h-48 object-cover rounded-lg">
-                                </div>
-                                <ul class="text-gray-700 space-y-2 text-base font-bold list-disc pl-5">
-                                    <li>Prélevements</li>
-                                    <li>Injections</li>
-                            </div>
+                           
 
 
                         </div>
@@ -255,7 +224,7 @@
                 `;
             } else if (type === 'bouton1') {
                 content = `
-                  <div class="bg-white shadow-lg rounded-lg p-8 max-w-4xl mx-auto flex flex-col md:flex-row gap-6">
+                <div class="bg-white shadow-lg rounded-lg p-8 max-w-4xl mx-auto flex flex-col md:flex-row gap-6">
     <div class="md:w-1/2 flex justify-center items-center">
         <img src="media/soins.jpeg" alt="Image médicale" class="w-full h-auto max-w-md rounded-lg shadow-md object-cover"/>
     </div>
@@ -305,7 +274,6 @@
         </ul>
     </div>
 </div>
-    
 
                 `;
             } else if (type === 'bouton2') {
@@ -331,7 +299,7 @@
             <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
             Etudiants paramédicaux
         </li>
-   
+        
         <li class="flex items-center">
             <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
             Etudiants en Santé Publique

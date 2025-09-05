@@ -133,6 +133,16 @@
             </div> -->
 
             <!-- Right Text Content -->
+            <div class="w-full md:w-2/3 lg:w-3/5 xl:w-1/2 bg-white rounded-lg shadow-xl relative overflow-hidden flex items-center justify-center p-6 md:p-10 mb-8 md:mb-0">
+                <div class="relative w-full h-96 md:h-[500px] lg:h-[600px] overflow-hidden rounded-lg">
+                    <img src="media/hop.jpg" alt="Modern interior design" class="w-full h-full object-cover object-center">
+                    <!-- Overlay shapes - optional, if you want to add more decorative elements -->
+                    <div class="absolute top-0 left-0 w-24 h-24 border-t-2 border-l-2 border-gray-300 opacity-50"></div>
+                    <div class="absolute bottom-0 right-0 w-24 h-24 border-b-2 border-r-2 border-gray-300 opacity-50"></div>
+                </div>
+                <!-- Decorative element behind image -->
+                <div class="absolute -right-24 top-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-gray-300 opacity-30 animate-pulse"></div>
+            </div>
                  <!-- Right Text Content -->
                  <section class="py-16 bg-gray-100 relative overflow-hidden">
                     <!-- Subtle background pattern -->
@@ -152,7 +162,7 @@
                                 </div>
                                 <ul class="text-gray-700 space-y-2 text-base font-bold list-disc pl-5">
                                     <li>Pédiatrie générale</li>
-                                    <li>Pédiatrie pneumopé3diatrie</li>
+                                    <li>Pédiatrie pneumopédiatrie</li>
                                     <li>Réanimation pediatrique</li>
                                    
                                 </ul>
@@ -162,6 +172,9 @@
                                 <div class="flex items-center space-x-4 mb-6">
                                     <i class="fas fa-ultrasound text-blue-700 text-3xl"></i>
                                     <h3 class="text-2xl font-bold text-blue-800">Néonatalogie</h3>
+                                </div>
+                                <div class="mb-6">
+                                    <img src="media/neo.jpg" alt="Kinésithérapie Image" class="w-full h-48 object-cover rounded-lg">
                                 </div>
                                 <ul class="text-gray-700 space-y-2 text-base font-bold list-disc pl-5">
                                     <li>Soins courants</li>
@@ -240,48 +253,56 @@
                 `;
             } else if (type === 'bouton1') {
                 content = `
-                  <div class="bg-white shadow-lg rounded-lg p-8 max-w-4xl mx-auto flex flex-col md:flex-row gap-6">
-        <div class="md:w-1/2">
-            <img src="media/des02.jpg" alt="Image médicale" class="w-full h-auto rounded-lg shadow-md object-cover"/>
-        </div>
-        <div class="md:w-1/2">
-            <h3 class="text-3xl font-bold text-orange-700 mb-6 border-b-2 border-blue-200 pb-2">Soins</h3>
-            <ul class="text-gray-700 text-lg space-y-4">
-                <li class="flex items-center">
-                    <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    Consultation externe
-                </li>
-                <li class="flex items-center">
-                    <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    Kinésithérapie
-                </li>
-                <li class="flex items-center">
-                    <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    Ergothérapie
-                </li>
-                <li class="flex items-center">
-                    <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    Appui psychosocial
-                </li>
-                <li class="flex items-center">
-                    <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    Examens de laboratoire
-                </li>
-                <li class="flex items-center">
-                    <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    Examens d’imagerie
-                </li>
-                <li class="flex items-center">
-                    <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    ECG
-                </li>
-                <li class="flex items-center">
-                    <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    Spirométrie
-                </li>
-            </ul>
-        </div>
-    </div>;
+               <div class="bg-white shadow-lg rounded-lg p-8 max-w-4xl mx-auto flex flex-col md:flex-row gap-6">
+    <div class="md:w-1/2 flex justify-center items-center">
+        <img src="media/soins.jpeg" alt="Image médicale" class="w-full h-auto max-w-md rounded-lg shadow-md object-cover"/>
+    </div>
+    <div class="md:w-1/2">
+        <h3 class="text-3xl font-bold text-orange-700 mb-6 border-b-2 border-blue-200 pb-2">Soins</h3>
+        <ul class="text-gray-700 text-lg space-y-4">
+            <li class="flex items-center">
+                <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Hospitalisation pour pathologie non chirurgicale
+            </li>
+            <li class="flex items-center">
+                <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Consultation externe
+            </li>
+            <li class="flex items-center">
+                <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Soins infirmiers et de puériculture
+            </li>
+            <li class="flex items-center">
+                <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Kinésithérapie
+            </li>
+            <li class="flex items-center">
+                <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Ergothérapie
+            </li>
+            <li class="flex items-center">
+                <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Appui psychosocial
+            </li>
+            <li class="flex items-center">
+                <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Examens de laboratoire
+            </li>
+            <li class="flex items-center">
+                <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Examens d’imagerie
+            </li>
+            <li class="flex items-center">
+                <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                ECG
+            </li>
+            <li class="flex items-center">
+                <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Spirométrie
+            </li>
+        </ul>
+    </div>
+</div>
 
                 `;
             } else if (type === 'bouton2') {
@@ -307,10 +328,7 @@
             <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
             Etudiants paramédicaux
         </li>
-        <li class="flex items-center">
-            <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            ECG(Electrocardiogramme)
-        </li>
+        
         <li class="flex items-center">
             <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
             Etudiants en Santé Publique
@@ -324,7 +342,7 @@
                 content = `
                 <div class="bg-white shadow-lg rounded-lg p-8 max-w-4xl mx-auto flex flex-col md:flex-row gap-6">
         <div class="md:w-1/2">
-            <img src="media/des02.jpg" alt="Image médicale" class="w-full h-auto rounded-lg shadow-md object-cover"/>
+            <img src="media/recherche.jpg" alt="Image médicale" class="w-full h-auto rounded-lg shadow-md object-cover"/>
         </div>
         <div class="md:w-1/2">
             
