@@ -40,22 +40,22 @@
         }
 
         /* Responsive adjustments */
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
             .sticky-bottom-text {
-                font-size: 1.25rem; /* Reduced font size for smaller screens */
-                padding: 1rem;
+                font-size: 1.5rem;
+                padding: 0.75rem;
             }
             .sticky-bottom-text p {
                 line-height: 1.5;
             }
             .fixed-buttons {
-                top: 4rem; /* Adjusted for smaller header */
+                top: 4rem;
             }
             .fixed-text {
-                top: 8rem; /* Adjusted to follow buttons */
+                top: 8rem;
             }
             .hero-section {
-                padding-top: 10rem; /* Adjusted padding for fixed elements */
+                padding-top: 10rem;
             }
             .timeline-container {
                 padding-left: 1rem;
@@ -73,25 +73,50 @@
                 left: 1.5rem;
             }
         }
-        @media (max-width: 640px) {
-            .header-logos {
-                flex-direction: column;
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: row; /* Garder le conteneur en ligne */
+                flex-wrap: nowrap; /* Empêcher le retour à la ligne */
+                justify-content: space-between;
                 align-items: center;
-                gap: 0.5rem;
+                gap: 0.4rem; /* Réduire l'espacement */
+                padding: 0 0.5rem; /* Réduire le padding du conteneur */
+            }
+            .header-logos {
+                flex-direction: row; /* Garder les logos en ligne */
+                flex-wrap: nowrap; /* Empêcher le retour à la ligne */
+                justify-content: center;
+                gap: 0.4rem; /* Réduire l'espacement */
+            }
+            .header-logos a {
+                width: 2.25rem; /* Réduire davantage la taille des logos */
+                height: 2.25rem;
+                border-width: 2px; /* Ajuster la bordure */
             }
             .header-nav {
-                flex-direction: column;
-                gap: 0.5rem;
+                flex-direction: row; /* Garder la navigation en ligne */
+                flex-wrap: nowrap; /* Empêcher le retour à la ligne */
+                justify-content: center;
+                gap: 0.4rem; /* Réduire l'espacement */
                 text-align: center;
+                margin-top: 0; /* Supprimer la marge supérieure */
+            }
+            .header-nav li a {
+                font-size: 0.75rem; /* Réduire davantage la taille de la police */
+                padding: 0.2rem 0.4rem; /* Réduire davantage le padding */
+                white-space: nowrap; /* Empêcher le texte de passer à la ligne */
             }
             .button-group {
-                flex-direction: column;
-                align-items: center;
+                flex-direction: row; /* Garder les boutons en ligne */
+                flex-wrap: nowrap; /* Empêcher le retour à la ligne */
+                justify-content: center;
                 gap: 0.5rem;
             }
             .button-group button {
-                width: 100%;
-                max-width: 12rem;
+                width: auto; /* Ajuster la largeur automatiquement */
+                min-width: 6rem; /* Largeur minimale pour éviter des boutons trop petits */
+                padding: 0.5rem 0.75rem; /* Réduire le padding */
+                font-size: 0.875rem; /* Réduire la taille de la police */
             }
             .hero-content {
                 flex-direction: column;
@@ -114,6 +139,100 @@
                 max-height: 80vh;
                 overflow-y: auto;
             }
+            .sticky-bottom-text {
+                font-size: 1.25rem;
+                padding: 0.5rem;
+            }
+            .hero-section {
+                padding-top: 12rem;
+            }
+        }
+        @media (max-width: 640px) {
+            .header-container {
+                flex-direction: row; /* Garder le conteneur en ligne */
+                flex-wrap: nowrap; /* Empêcher le retour à la ligne */
+                justify-content: space-between;
+                align-items: center;
+                gap: 0.2rem; /* Réduire encore l'espacement */
+                padding: 0 0.3rem; /* Réduire encore le padding du conteneur */
+            }
+            .header-logos {
+                flex-direction: row; /* Garder les logos en ligne */
+                flex-wrap: nowrap; /* Empêcher le retour à la ligne */
+                justify-content: center;
+                gap: 0.2rem; /* Réduire encore l'espacement */
+            }
+            .header-logos a {
+                width: 1.75rem; /* Réduire encore la taille des logos */
+                height: 1.75rem;
+                border-width: 1px; /* Réduire la bordure */
+            }
+            .header-nav {
+                flex-direction: row; /* Garder la navigation en ligne */
+                flex-wrap: nowrap; /* Empêcher le retour à la ligne */
+                justify-content: center;
+                gap: 0.2rem; /* Réduire encore l'espacement */
+                text-align: center;
+                margin-top: 0; /* Supprimer la marge supérieure */
+            }
+            .header-nav li a {
+                font-size: 0.65rem; /* Réduire encore la taille de la police */
+                padding: 0.15rem 0.3rem; /* Réduire encore plus le padding */
+                white-space: nowrap; /* Empêcher le texte de passer à la ligne */
+            }
+            .button-group {
+                flex-direction: row; /* Garder les boutons en ligne */
+                flex-wrap: nowrap; /* Empêcher le retour à la ligne */
+                justify-content: center;
+                gap: 0.3rem; /* Réduire encore l'espacement */
+            }
+            .button-group button {
+                width: auto;
+                min-width: 5rem; /* Largeur minimale encore plus petite */
+                padding: 0.4rem 0.6rem; /* Réduire davantage le padding */
+                font-size: 0.7rem; /* Taille de police encore plus petite */
+            }
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-image-container {
+                width: 100%;
+                max-width: none;
+            }
+            .hero-text {
+                align-items: center;
+            }
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            .hero-text h2 {
+                font-size: 1rem;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .modal-content {
+                max-height: 80vh;
+                overflow-y: auto;
+                padding: 1rem;
+            }
+            .sticky-bottom-text {
+                font-size: 1rem;
+                padding: 0.5rem;
+            }
+            .fixed-buttons {
+                top: 3.5rem;
+            }
+            .fixed-text {
+                top: 7rem;
+            }
+            .hero-section {
+                padding-top: 10rem;
+            }
         }
     </style>
 </head>
@@ -121,13 +240,13 @@
     <!-- Header -->
     <header class="bg-gray-600 text-white p-4 sticky top-0 shadow-md z-50 animate-fadeIn">
         <div class="container mx-auto">
-            <div class="flex flex-col sm:flex-row justify-between items-center">
-                <div class="flex header-logos space-x-4 sm:space-x-4">
+            <div class="flex flex-row justify-between items-center header-container">
+                <div class="flex header-logos space-x-4">
                     <a href="https://www.msanp.gov.mg/" class="w-14 h-14 bg-[url('media/tee.jpg')] bg-contain bg-center bg-no-repeat bg-white border-4 border-white rounded-lg hover:brightness-110 transition-all duration-300 block"></a>
                     <a href="https://www.msanp.gov.mg/index.php/Staff?staff=DGFS" target="_blank" class="w-14 h-14 bg-[url('media/sant.jpg')] bg-contain bg-center bg-no-repeat bg-white border-4 border-white rounded-lg hover:brightness-110 transition-all duration-300 block"></a>
                     <a href="index.html" class="w-14 h-14 bg-[url('media/chumet.png')] bg-contain bg-center bg-no-repeat bg-white border-4 border-white rounded-lg hover:brightness-110 transition-all duration-300 block"></a>
                 </div>
-                <ul class="flex header-nav space-x-6 sm:space-x-6 mt-4 sm:mt-0">
+                <ul class="flex header-nav space-x-6">
                     <li><a href="index.html" class="font-bold hover:text-blue-200 transition-all duration-300 transform hover:scale-105">Accueil</a></li>
                     <li><a href="#services" class="font-bold hover:text-blue-200 transition-all duration-300 transform hover:scale-105">Services</a></li>
                     <li><a href="#contact" class="font-bold hover:text-blue-200 transition-all duration-300 transform hover:scale-105">Contact</a></li>
@@ -141,7 +260,7 @@
     <!-- Fixed Buttons Section -->
     <section class="bg-gradient-to-r from-gray-50 to-gray-100 text-white py-4 fixed top-20 left-0 w-full z-50 shadow-lg animate-fadeIn fixed-buttons">
         <div class="container mx-auto px-4">
-            <div class="flex justify-center button-group space-x-5 sm:space-x-5">
+            <div class="flex justify-center button-group space-x-5">
                 <button onclick="showModal('bouton1')" class="bg-gradient-to-r from-blue-700 to-blue-800 bg-opacity-90 text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-blue-900 hover:bg-opacity-100 w-32 text-center font-bold border border-blue-500 shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-xl">SOINS</button>
                 <button onclick="showModal('bouton2')" class="bg-gradient-to-r from-blue-700 to-blue-800 bg-opacity-90 text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-blue-900 hover:bg-opacity-100 w-32 text-center font-bold border border-blue-500 shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-xl">FORMATION</button>
                 <button onclick="showModal('bouton3')" class="bg-gradient-to-r from-blue-700 to-blue-800 bg-opacity-90 text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-blue-900 hover:bg-opacity-100 w-32 text-center font-bold border border-blue-500 shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-xl">RECHERCHE</button>
@@ -151,12 +270,9 @@
 
     <!-- Sticky Text Below Buttons -->
     <div class="fixed top-36 left-0 w-full bg-gradient-to-r from-white to-blue-50 text-black text-center py-6 z-50 animate-fadeIn sticky-bottom-text fixed-text shadow-md">
-        <p class="text-2xl sm:text-2xl font-bold font-amiri tracking-wide leading-relaxed">
+        <p class="text-2xl font-bold font-amiri tracking-wide leading-relaxed">
             <span class="text-orange-700 block animate-slideIn" style="animation-delay: 0.2s;">Mission: Soins, formation et recherche</span>
-            <!-- <span class="text-orange-900 block animate-slideIn hover:pulse italic" style="animation-delay: 0.4s;">Vision: Hôpital accueillant, offrant des soins spécialisés de qualité, accessible à tous</span>
-        </p> -->
-        
-           
+        </p>
     </div>
 
     <!-- Modal -->
@@ -174,17 +290,14 @@
         <div class="container mx-auto flex flex-col md:flex-row items-center justify-center relative z-10 hero-content">
             <div class="w-full md:w-2/3 lg:w-3/5 xl:w-1/2 bg-white rounded-lg shadow-xl relative overflow-hidden flex items-center justify-center p-6 md:p-10 mb-8 md:mb-0 hero-image-container">
                 <div class="relative w-full h-96 md:h-[500px] lg:h-[700px] overflow-hidden rounded-lg">
-                 
                     <img src="media/des3.jpg" alt="Modern interior design 1" class="w-full h-full object-cover object-center absolute top-0 left-0 transition-opacity duration-1000" id="slide1">
                     <img src="media/des4.jpg" alt="Modern interior design 2" class="w-full h-full object-cover object-center absolute top-0 left-0 transition-opacity duration-1000 opacity-0" id="slide2">
                     <img src="media/loggg.jpeg" alt="Modern interior design 3" class="w-full h-full object-cover object-center absolute top-0 left-0 transition-opacity duration-1000 opacity-0" id="slide3">
-                    
                     <img src="media/des1.jpg" alt="Modern interior design 4" class="w-full h-full object-cover object-center absolute top-0 left-0 transition-opacity duration-1000 opacity-0" id="slide4">
                     <img src="media/acc.jpeg" alt="Modern interior design 5" class="w-full h-full object-cover object-center absolute top-0 left-0 transition-opacity duration-1000 opacity-0" id="slide5">
                     <div class="absolute top-0 left-0 w-24 h-24 border-t-2 border-l-2 border-gray-300 opacity-50"></div>
                     <div class="absolute bottom-0 right-0 w-24 h-24 border-b-2 border-r-2 border-gray-300 opacity-50"></div>
                 </div>
-                
                 <script>
                     const slides = [
                         document.getElementById('slide1'),
@@ -212,10 +325,8 @@
             <div class="w-full md:w-1/3 lg:w-2/5 xl:w-1/2 flex flex-col items-center md:items-start text-center md:text-left p-4 md:pl-12 hero-text">
                 <h1 class="text-5xl lg:text-4xl font-extrabold text-yellow-500 leading-tight mb-4">
                     Bienvenue au <span class="block"> Centre Hospitalier Universitaire Mère Enfant Tsaralalàna (CHUMET)</span>
-                      
                 </h1>
                 <h2 class="text-orange-900 block animate-slideIn hover:pulse italic" style="animation-delay: 0.4s; font-size: x-large;">Vision: Hôpital accueillant, offrant des soins spécialisés de qualité, accessible à tous</h2>
-        
                 <div class="flex space-x-2 mt-8">
                     <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
                     <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
